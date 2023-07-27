@@ -41,4 +41,20 @@ Built build_runner:build_runner.
 
 # 运行测试程序
 $ dart test/test_service.dart      
+
+$ git tag 1.0.0
+$ git push origin --tags
+```
+
+
+### 项目引用
+
+`pubspec.yaml:`
+
+```yaml
+dependencies:
+ btrpc:
+    git:
+      url: https://gitlab.zhulinkeji.com/middleware/rpc-dart-client.git
+      ref: 1.0.0
 ```
