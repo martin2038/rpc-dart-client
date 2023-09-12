@@ -7,7 +7,7 @@ import '../example/demo_service.dart';
 import 'dart:convert';
 
 Future<void> main(List<String> args) async {
-  final channel = ClientChannel('example.testbtyxapi.com');
+  final channel = ClientChannel('idemo.wangyuedaojia.com');
 
   // final channel = ClientChannel('127.0.0.1',
   //     port: 50051,
