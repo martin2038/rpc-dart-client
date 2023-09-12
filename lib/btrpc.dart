@@ -115,6 +115,7 @@ class ServiceConfig {
       bool errorToRpcResult = false,
       Iterable<ClientInterceptor>? interceptors}) {
     var _headers = <String, String>{};
+    print('ServiceConfig accessToken :  $accessToken');
     if (accessToken != null) {
       _headers[AUTHORIZATION] = 'Bearer $accessToken';
     }
