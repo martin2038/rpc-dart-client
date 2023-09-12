@@ -115,7 +115,7 @@ class ServiceConfig {
       bool errorToRpcResult = false,
       Iterable<ClientInterceptor>? interceptors}) {
     var _headers = <String, String>{};
-    print('ServiceConfig accessToken :  $accessToken');
+    // print('ServiceConfig accessToken :  $accessToken');
     if (accessToken != null && accessToken.isNotEmpty) {
       _headers[AUTHORIZATION] = 'Bearer '+accessToken;
     }
@@ -127,9 +127,9 @@ class ServiceConfig {
     } else if (null != clientMetaMap && clientMetaMap.isNotEmpty) {
       _headers[CLIENT_META] = jsonEncode(clientMetaMap);
     }
-     _headers['test-header'] = 'test-header $accessToken';
-    print('ServiceConfig metadata AUTHORIZATION:  ${_headers[AUTHORIZATION]}');
-    print('ServiceConfig _headers :  $_headers');
+    //  _headers['test-header'] = 'test-header $accessToken';
+    // print('ServiceConfig metadata AUTHORIZATION:  ${_headers[AUTHORIZATION]}');
+    // print('ServiceConfig _headers :  $_headers');
     return ServiceConfig._(CallOptions(metadata: _headers, timeout: timeout),
         interceptors, errorToRpcResult, tokenFunc ??= () => '');
   }
