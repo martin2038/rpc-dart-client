@@ -127,7 +127,7 @@ class ServiceConfig {
     } else if (null != clientMetaMap && clientMetaMap.isNotEmpty) {
       _headers[CLIENT_META] = jsonEncode(clientMetaMap);
     }
-     _headers['test-header'] = 'test-header';
+     _headers['test-header'] = 'test-header $accessToken';
     print('ServiceConfig metadata AUTHORIZATION:  ${_headers[AUTHORIZATION]}');
     print('ServiceConfig _headers :  $_headers');
     return ServiceConfig._(CallOptions(metadata: _headers, timeout: timeout),
